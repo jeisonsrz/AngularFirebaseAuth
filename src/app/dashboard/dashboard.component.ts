@@ -27,6 +27,7 @@ export class DashboardComponent implements OnInit {
         })
       )).subscribe((data: any[]) => {
         this.pets = data;
+        console.log(this.pets);
       }
 
     );
@@ -72,6 +73,7 @@ export class DashboardComponent implements OnInit {
   eliminarMascota(key) {
     this.servicioPets.deletePet(key).then(() => {
       console.log('Eliminado');
+      alert('Eliminado');
     });
   }
 }

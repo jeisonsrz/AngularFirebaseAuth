@@ -26,7 +26,7 @@ const rutas : Routes = [
   {path: 'dashboard', component : DashboardComponent, canActivate: [AuthenticationGuard]},
   {path: 'perfil', component : PerfilComponent, canActivate: [AuthenticationGuard] },
   {path: 'pet', component : PetComponent, canActivate: [AuthenticationGuard]},
-
+  {path: 'uploadfile', component : UploadfileComponent, canActivate: [AuthenticationGuard]},
 ];
 
 @NgModule({

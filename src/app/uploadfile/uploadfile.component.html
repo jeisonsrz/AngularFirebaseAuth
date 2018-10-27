@@ -1,3 +1,4 @@
-<p>
-  uploadfile works!
-</p>
+<h1>Subir Archivos</h1>
+<input (change)="uploadFile($event)" type="file">
+<p>porcentaje : {{porcentaje | async}}</p>
+<p>Ruta : {{url | async}}</p>
