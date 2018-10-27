@@ -15,6 +15,9 @@ import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {FormsModule} from '@angular/forms';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AuthenticationGuard} from './services/authentication.guard';
+import { UploadfileComponent } from './uploadfile/uploadfile.component';
+import * as path from 'path';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 
 const rutas : Routes = [
   {path: '', component : InicioComponent},
@@ -23,7 +26,8 @@ const rutas : Routes = [
   {path: 'dashboard', component : DashboardComponent, canActivate: [AuthenticationGuard]},
   {path: 'perfil', component : PerfilComponent, canActivate: [AuthenticationGuard] },
   {path: 'pet', component : PetComponent, canActivate: [AuthenticationGuard]},
-  ];
+
+];
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ const rutas : Routes = [
     DashboardComponent,
     PerfilComponent,
     InicioComponent,
-    PetComponent
+    PetComponent,
+    UploadfileComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +47,7 @@ const rutas : Routes = [
     AngularFireDatabaseModule,
     FormsModule,
     AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
